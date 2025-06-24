@@ -1,0 +1,3 @@
+a=[["Karthivk",20],["Sanjay",13],["Gokul",25]]
+a=list(map(lambda x:[x[0],x[1]+5],a))
+print(a)
