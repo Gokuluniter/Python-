@@ -1,0 +1,22 @@
+n=int(input("Enter a year: "))
+a=n-2000
+b=a//4
+c=a-b
+d=b*2 
+e=c+d 
+f=e%7
+match f:
+    case 0:
+        print("Sunday")
+    case 1:
+        print("Monday")
+    case 2:
+        print("Tuesday")
+    case 3:
+        print("Wednesday")
+    case 4:
+        print("Thursday")
+    case 5:
+        print("Friday")
+    case 6:
+        print("Saturday")
