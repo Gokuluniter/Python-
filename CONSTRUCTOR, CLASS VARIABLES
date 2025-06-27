@@ -1,0 +1,13 @@
+class Person:
+    com="Paypal"
+    def __init__ (self,name,age):
+        self.name=name
+        self.age=age
+    def display(self):
+        print("Name: ", self.name)
+        print("Age: ", self.age)
+        print("Conmpany: ",Person.com)
+s=Person("Gokul","22")
+s1=Person("Sowmiya","22")
+s.display()
+s1.display()
