@@ -1,0 +1,41 @@
+class emp:
+    
+    com="Cognizant"
+    profit=500000
+        
+    def __init__(self,name,age,salary,share_per):
+        
+        self.name=name
+        self.age=age
+        self.salary=salary
+        self.share_per=share_per
+        self.tax=0 
+        self.share=0 
+    
+    def tax_ded(self):
+        self.tax=self.salary*0.1 
+    
+    
+    def cal_share(self):
+        self.share=emp.profit*self.share_per*0.01
+        
+    
+    def display(self):
+        self.tax_ded()
+        self.cal_share()
+        print("Name: ",self.name)
+        print("Tax_reduction: ",self.tax)
+        print("Company: ",emp.com)
+        print("Share Percentage: ",self.share)
+        print("=============================")
+        
+e1=emp("Gokul",22,400000,10)
+e2=emp("Sowmiya",22,500000,12)
+e3=emp("Rahul",24,300000,12)
+
+e1.display()
+
+
+e2.display()
+
+e3.display()
