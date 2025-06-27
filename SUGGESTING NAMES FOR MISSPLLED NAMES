@@ -1,0 +1,26 @@
+names = []
+for i in range(5):
+    name = input(f"Enter name {i+1}: ").strip()
+    names.append(name)
+
+typed = input("Enter the name (possibly misspelled): ").strip()
+typed_chars = list(typed)
+
+suggestion = None
+for name in names:
+    if len(name) == len(typed):
+        match_count = 0
+        name_chars = list(name)
+
+        for i in range(len(name)):
+            if name_chars[i].lower() == typed_chars[i].lower():
+                match_count += 1
+
+        if match_count >= len(name) // 2:
+            suggestion = name
+            break
+
+if suggestion:
+    print(f'Did you mean "{suggestion}"?')
+else:
+    print("No close match found.")
